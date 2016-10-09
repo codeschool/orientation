@@ -44,6 +44,15 @@ GIT
       activemodel (> 4, < 5.1)
 
 GIT
+  remote: git://github.com/olivierlacan/letsencrypt-rails-heroku.git
+  revision: 5e1bb71d03ae6ec9eb230e184d9395bacf24c457
+  branch: automiddleware
+  specs:
+    letsencrypt-rails-heroku (0.2.7)
+      acme-client (~> 0.4.0)
+      platform-api
+
+GIT
   remote: https://github.com/rails/activemodel-serializers-xml
   revision: 570ee7ed33d60e44ca1f3ccbec3d1fbf61d52cbf
   specs:
@@ -190,9 +199,6 @@ GEM
     kgio (2.10.0)
     launchy (2.4.3)
       addressable (~> 2.3)
-    letsencrypt-rails-heroku (0.2.7)
-      acme-client (~> 0.4.0)
-      platform-api
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -400,7 +406,7 @@ DEPENDENCIES
   friendly_id!
   haml-rails
   launchy
-  letsencrypt-rails-heroku
+  letsencrypt-rails-heroku!
   listen (~> 3.0.5)
   mandrill_mailer
   omniauth
