@@ -25,7 +25,6 @@ module Api
           {
             title: article.title,
             title_link: article_url(article),
-            text: article.pg_search_highlight.html_safe,
             color: article.slack_color
           }
         end
