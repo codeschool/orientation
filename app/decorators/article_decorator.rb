@@ -60,16 +60,33 @@ class ArticleDecorator < ApplicationDecorator
   end
 
   def signal
-    state = 'fresh' if object.fresh?
-    state = 'stale' if object.stale?
-    state = 'rotten' if object.rotten?
-
     screen_reader_text = content_tag(:span, state, class: 'srt')
 
     if state
       content_tag(:div, screen_reader_text, class: "signal signal--#{state}")
     else
       content_tag(:div, state, class: 'signal')
+    end
+  end
+
+  def state
+    if object.fresh?
+      "fresh" 
+    elsif object.stale?
+      "stale" 
+    elsif object.rotten?
+      "rotten"
+    end
+  end
+
+  def slack_color
+    case state
+    when "fresh"
+      "good"
+    when "stale"
+      "warning"
+    when "rotten"
+      "danger"
     end
   end
 end

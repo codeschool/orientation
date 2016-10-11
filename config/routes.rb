@@ -1,4 +1,7 @@
+require_relative "routes/api_constraints"
+
 Rails.application.routes.draw do
+  root "guides#index"
 
   get 'auth/:provider/callback', to: 'sessions#create', as: :oauth_callback
   get 'auth/failure', to: redirect('/')
@@ -35,10 +38,15 @@ Rails.application.routes.draw do
   resources :endorsements, only: :index
 
   # this has to be the last route because we're catching slugs at the root path
-  resources :articles, path: "", only: :show
+  resources :articles, only: :show
 
-  root "guides#index"
-
+  namespace :api, defaults: { format: :json } do
+    # resources :search, only: :index
+    scope module: :v1, constraints: Routes::ApiConstraints.new(version: 1, default: true) do
+      post :search, to: "search#index"
+    end
+  end
+  
   # Serve websocket cable requests in-process
   # mount ActionCable.server => '/cable'
 end
