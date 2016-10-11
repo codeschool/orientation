@@ -87,6 +87,8 @@ class ArticleDecorator < ApplicationDecorator
       "warning"
     when "rotten"
       "danger"
+    else
+      "#e6e6e6"
     end
   end
 end
