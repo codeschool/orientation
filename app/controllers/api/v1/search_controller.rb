@@ -2,7 +2,9 @@ module Api
   module V1
     class SearchController < ApplicationController
       include ActionView::Helpers::TextHelper
+      
       skip_before_action :verify_authenticity_token
+      skip_before_action :authenticate_user!
 
       before_action :verify_slack_request
 
