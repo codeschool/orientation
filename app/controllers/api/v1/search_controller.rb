@@ -2,14 +2,14 @@ module Api
   module V1
     class SearchController < ApplicationController
       include ActionView::Helpers::TextHelper
-      
+
       skip_before_action :verify_authenticity_token
       skip_before_action :authenticate_user!
 
       before_action :verify_slack_request
 
       def index
-        results = format_results(Article.text_search(params[:text]))
+        results = format_results(Article.text_search(params[:text]).limit(5))
 
         render json: {
           response_type: "in_channel",
