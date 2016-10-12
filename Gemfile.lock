@@ -35,6 +35,15 @@ GIT
       activerecord (>= 4.0.0)
 
 GIT
+  remote: https://github.com/olivierlacan/letsencrypt-rails-heroku
+  revision: 117ce3f37277e95808dfec4d08078927a0bbb00e
+  branch: automiddleware
+  specs:
+    letsencrypt-rails-heroku (0.2.7)
+      acme-client (~> 0.4.0)
+      platform-api
+
+GIT
   remote: https://github.com/olivierlacan/simple_form
   revision: 86ab4252ecad1956fa2ddeea2d62a1584dac10f6
   branch: rails-5-type-for-attribute
@@ -42,15 +51,6 @@ GIT
     simple_form (3.2.1)
       actionpack (> 4, < 5.1)
       activemodel (> 4, < 5.1)
-
-GIT
-  remote: git://github.com/olivierlacan/letsencrypt-rails-heroku.git
-  revision: 5e1bb71d03ae6ec9eb230e184d9395bacf24c457
-  branch: automiddleware
-  specs:
-    letsencrypt-rails-heroku (0.2.7)
-      acme-client (~> 0.4.0)
-      platform-api
 
 GIT
   remote: https://github.com/rails/activemodel-serializers-xml
