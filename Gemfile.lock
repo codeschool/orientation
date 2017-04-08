@@ -115,7 +115,7 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bugsnag (4.0.2)
+    bugsnag (5.2.0)
     builder (3.2.3)
     bullet (5.0.0)
       activesupport (>= 3.0.0)
@@ -175,10 +175,6 @@ GEM
     ffi (1.9.10)
     font-awesome-sass (4.7.0)
       sass (>= 3.2)
-    fontcustom (1.0.0)
-      json
-      listen
-      thor
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     haml (4.0.7)
@@ -367,10 +363,6 @@ GEM
       kgio (~> 2.6)
       raindrops (~> 0.7)
     uniform_notifier (1.9.0)
-    web-console (3.1.1)
-      activemodel (>= 4.2)
-      debug_inspector
-      railties (>= 4.2)
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
@@ -400,7 +392,6 @@ DEPENDENCIES
   factory_girl_rails (~> 4.5.0)
   faker
   font-awesome-sass
-  fontcustom
   friendly_id!
   haml-rails
   launchy
@@ -434,7 +425,6 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   uglifier
   unicorn
-  web-console
 
 RUBY VERSION
    ruby 2.4.0p0
