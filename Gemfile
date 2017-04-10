@@ -89,6 +89,8 @@ group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'derailed_benchmarks'
+  gem 'stackprof'
 end
 
 group :development, :test do
@@ -117,7 +119,6 @@ end
 group :production, :staging do
   gem 'rails_12factor'
   gem 'rack-timeout'
-  gem 'unicorn'
   # platform-api fork is necessary to allow letsencrypt-rails-heroku to
   # make Heroku API requests to upload the Let's Encrypt SSL certificates
   gem 'platform-api', github: 'jalada/platform-api', branch: 'master'
