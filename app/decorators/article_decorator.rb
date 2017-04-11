@@ -84,6 +84,7 @@ class ArticleDecorator < ApplicationDecorator
       "stale"
     elsif object.rotten?
       "rotten"
+    elsif object.outdated?
     end
   end
 
