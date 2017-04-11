@@ -79,25 +79,24 @@ class ArticleDecorator < ApplicationDecorator
 
   def state
     if object.fresh?
-      "fresh"
+      :fresh
     elsif object.stale?
-      "stale"
-    elsif object.rotten?
-      "rotten"
+      :stale
     elsif object.outdated?
+      :outdated
     end
   end
 
   def slack_color
     case state
-    when "fresh"
-      "good"
-    when "stale"
-      "warning"
-    when "rotten"
-      "danger"
+    when :fresh
+      :good
+    when :stale
+      :warning
+    when :outdated
+      :danger
     else
-      "#e6e6e6"
+      :"#e6e6e6"
     end
   end
 end

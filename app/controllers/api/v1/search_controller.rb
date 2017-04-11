@@ -25,7 +25,7 @@ module Api
           {
             title: article.title,
             title_link: article_url(article),
-            color: article.slack_color
+            color: article.slack_color.to_s
           }
         end
       end
