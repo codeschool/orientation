@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby ENV['CUSTOM_RUBY_VERSION'] || '2.4.0'
+ruby ENV['CUSTOM_RUBY_VERSION'] || '2.4.1'
 
 # Force HTTPS for GitHub under bundler 1.x, which is the default for bundler 2.x
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
@@ -11,7 +11,7 @@ gem 'rails', "~> 5.0.1"
 gem 'puma', '~> 3.0'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', github: "rails/sass-rails", branch: "master"
+gem 'sass-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
@@ -36,7 +36,7 @@ gem 'delayed_job'
 gem 'delayed_job_active_record'
 
 # Form builder
-gem 'simple_form', github: "olivierlacan/simple_form", branch: "rails-5-type-for-attribute"
+gem 'simple_form'
 
 # Server-side syntax highlighting
 gem 'pygments.rb'
@@ -49,9 +49,9 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 
 # Full-text search with PostgreSQL
-gem 'pg_search', github: 'Casecommons/pg_search'
+gem 'pg_search'
 
-gem 'activemodel-serializers-xml', github: 'rails/activemodel-serializers-xml'
+gem 'activemodel-serializers-xml'
 
 # Decorators
 gem 'draper', '3.0.0.pre1'
@@ -60,7 +60,7 @@ gem 'draper', '3.0.0.pre1'
 gem 'responders','~> 2.0'
 
 # Friendly URL slugs for models
-gem 'friendly_id', github: "norman/friendly_id", branch: "master"
+gem 'friendly_id'
 
 # Environment variables from .env files
 gem 'dotenv-rails'
