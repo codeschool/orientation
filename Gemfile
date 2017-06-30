@@ -119,10 +119,6 @@ end
 group :production, :staging do
   gem 'rails_12factor'
   gem 'rack-timeout'
-  # platform-api fork is necessary to allow letsencrypt-rails-heroku to
-  # make Heroku API requests to upload the Let's Encrypt SSL certificates
-  gem 'platform-api', github: 'jalada/platform-api', branch: 'master'
-  gem 'letsencrypt-rails-heroku', github: "olivierlacan/letsencrypt-rails-heroku", branch: "automiddleware"
 
   # == Third-party Integrations == #
 
